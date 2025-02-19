@@ -19,6 +19,27 @@ This `docker-compose.yml` defines the following services:
 sudo apt-get update
 sudo apt-get install docker-compose-plugin
 ```
+
+## Add New User to docker
+```
+sudo usermod -aG docker $USER
+newgrp docker
+```
+
+## Deployment
+To start the containers, run:
+```sh
+docker-compose up -d
+```
+To stop and remove containers, run:
+```sh
+docker-compose down
+```
+To view logs for a specific service, use:
+```sh
+docker logs -f oracle-db
+```
+
 ### 1. **Oracle Database (oracle-db)**
 - **Image:** `container-registry.oracle.com/database/express`
 - **Container Name:** `oracle-db`
@@ -63,20 +84,6 @@ sudo apt-get install docker-compose-plugin
 ## Volumes
 - **oracle-data**: Persistent storage for OracleDB data.
 - **ords-config**: Stores ORDS configuration files.
-
-## Deployment
-To start the containers, run:
-```sh
-docker-compose up -d
-```
-To stop and remove containers, run:
-```sh
-docker-compose down
-```
-To view logs for a specific service, use:
-```sh
-docker logs -f oracle-db
-```
 
 ## Accessing Services
 - **OracleDB:** Connect using SQL Developer or SQL*Plus with:
