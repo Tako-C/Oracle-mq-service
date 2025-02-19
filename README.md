@@ -1,13 +1,11 @@
 # Container Installation Guide  
-<p align="center">
+<div align="center">
   <img src="https://www.rabbitmq.com/img/rabbitmq-logo-with-name.svg" width="270">
-  <span style="font-size: 60px; font-weight: bold; margin: 0 15px;">+</span>
-  <img src="https://www.oracle.com/a/ocom/img/rest.svg" width="100"
-  style="margin: 0 15px;"
-  >
-  <span style="font-size: 60px; font-weight: bold; margin: 0 15px;">+</span>
+  <img src="https://cdn-icons-png.flaticon.com/128/16001/16001835.png" width="40" style="margin: 0 20px;">
+  <img src="https://www.oracle.com/a/ocom/img/rest.svg" width="100">
+  <img src="https://cdn-icons-png.flaticon.com/128/16001/16001835.png" width="40" style="margin: 0 20px;">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oracle_logo.svg/512px-Oracle_logo.svg.png?20210811183004" width="270">
-</p>
+</div>
 
 ## Overview  
 This guide provides instructions for setting up **RabbitMQ, OracleDB, and ORDS** containers.  
@@ -27,14 +25,14 @@ APEX is a **low-code platform** for building web applications on top of **Oracle
 ---
 <br/>
 
-## 1. Download the `oracle-mq-service` folder
+## 1. Download the `Oracle-mq-service` folder
 ```
-oracle-mq-service.git
+Oracle-mq-service.git
 ```
 
-## 2. Navigate to the `oracle-mq-service` folder
+## 2. Navigate to the `Oracle-mq-service` folder
 ```sh
-cd oracle-mq-service
+cd Oracle-mq-service
 ```
 
 ## 3. The folder contains the following files:
