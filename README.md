@@ -27,7 +27,7 @@ APEX is a **low-code platform** for building web applications on top of **Oracle
 
 ## 1. Download the `Oracle-mq-service` folder
 ```
-Oracle-mq-service.git
+https://github.com/Tako-C/Oracle-mq-service.git
 ```
 
 ## 2. Navigate to the `Oracle-mq-service` folder
