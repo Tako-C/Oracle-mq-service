@@ -254,13 +254,13 @@ CREATE OR REPLACE PROCEDURE READ_FROM_QUEUE_FROM_OUT_HOST IS
     l_response   CLOB;
     l_payload    VARCHAR2(4000);
 BEGIN
-    l_url := 'http://zyxmanetwork.thddns.net:5054/api/queues/%2F/test_queue/get';
+    l_url := 'http://<host>:<port>/api/queues/%2F/<queuename>/get';
     l_response := apex_web_service.make_rest_request(
         p_url         => l_url,
         p_http_method => 'POST',
         p_body        => '{"count":1, "ackmode":"ack_requeue_false", "encoding":"auto"}',
-        p_username    => 'guest',
-        p_password    => 'guest'
+        p_username    => 'admin',
+        p_password    => 'admin'
     );
     DBMS_OUTPUT.PUT_LINE('Response: ' || l_response);
 END;
