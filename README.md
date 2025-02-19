@@ -37,8 +37,9 @@ cd Oracle-mq-service
 
 ## 3. The folder contains the following files:
 - `docker-compose.yml`
-- `create_Process_log.sql`
+- `example_table_script.sql`
 - `Readme.md`
+- `docker-compose-details.md`
 
 ## 4. Run `docker-compose` to create the containers
 ```sh
