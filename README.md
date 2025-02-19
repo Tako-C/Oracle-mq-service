@@ -1,9 +1,9 @@
 # Container Installation Guide  
 <div align="center">
   <img src="https://www.rabbitmq.com/img/rabbitmq-logo-with-name.svg" width="270">
-  <img src="https://cdn-icons-png.flaticon.com/128/16001/16001835.png" width="40" style="margin: 0 20px;">
+  <img src="https://cdn-icons-png.flaticon.com/128/16001/16001835.png" width="40" hight= "40">
   <img src="https://www.oracle.com/a/ocom/img/rest.svg" width="100">
-  <img src="https://cdn-icons-png.flaticon.com/128/16001/16001835.png" width="40" style="margin: 0 20px;">
+  <img src="https://cdn-icons-png.flaticon.com/128/16001/16001835.png" width="40" hight= "40" >
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oracle_logo.svg/512px-Oracle_logo.svg.png?20210811183004" width="270">
 </div>
 
