@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  oracle-db:
+    image: container-registry.oracle.com/database/express
+    container_name: oracle-db
+    networks:
+      - oracle_network
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    environment:
+      - ORACLE_PWD=newPassword123
+      - ORACLE_ALLOW_REMOTE=true
+    volumes:
+      - ords-config:/config
+      - ./create_Process_log.sql:/tmp/create_Process_log.sql 
+    #command: >
+      #bash -c "sleep 30 && sqlplus / as sysdba @/tmp/create_Process_log.sql"
+   
+
+  ords:
+    image: container-registry.oracle.com/database/ords:latest
+    container_name: ordsv
+    depends_on:
+      - oracle-db
+    networks:
+      - oracle_network
+    ports:
+      - "8080:8080"
+    environment:
+      - ORDS_DB_HOST=oracle-db
+      - ORDS_DB_PORT=1521
+      - ORDS_DB_SERVICE=xe
+      - ORDS_DB_USER=SYSTEM
+      - ORDS_DB_PASSWORD=newPassword123
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    networks:
+      - oracle_network
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
+
+networks:
+  oracle_network:
+    driver: bridge
+
+volumes:
+  oracle-data:
+  ords-config:
