@@ -14,14 +14,10 @@ services:
       - ORACLE_ALLOW_REMOTE=true
     volumes:
       - ords-config:/config
-      - ./create_Process_log.sql:/tmp/create_Process_log.sql 
-    #command: >
-      #bash -c "sleep 30 && sqlplus / as sysdba @/tmp/create_Process_log.sql"
-   
 
   ords:
     image: container-registry.oracle.com/database/ords:latest
-    container_name: ordsv
+    container_name: ords
     depends_on:
       - oracle-db
     networks:
