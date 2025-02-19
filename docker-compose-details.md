@@ -14,6 +14,11 @@ Before running the Docker Compose setup, ensure you have:
 ## Services
 This `docker-compose.yml` defines the following services:
 
+## Install Docker compose
+```
+sudo apt-get update
+sudo apt-get install docker-compose-plugin
+```
 ### 1. **Oracle Database (oracle-db)**
 - **Image:** `container-registry.oracle.com/database/express`
 - **Container Name:** `oracle-db`
